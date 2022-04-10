@@ -1,0 +1,115 @@
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    transition: 0.3s;
+    z-index: 9999;
+}
+header.scroll{
+    background-color: white;
+}
+header .wrapper.scroll{
+    background-color: white;
+}
+header .wrapper{
+    width: 70%;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    justify-content: space-between;
+}
+.logo img{
+    width: 25px;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #233348;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+nav ul li{
+    margin: 0 13px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #1F1534;
+    transition: 0.3s;
+    opacity: 0.5;
+}
+nav ul li a:hover{
+    opacity: 1;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.burger span{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    display: block;
+    margin: 3px 0;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.burger.active span:nth-child(2){
+    display: none;
+}
+.burger.active span:nth-child(1){
+    transform: translateY(6px) rotate(45deg);
+}
+.burger.active span:nth-child(3){
+    transform:translateY(0px)  rotate(-45deg);
+}
+@media screen and (max-width:1024px) {
+    header .wrapper{
+        width: 75%;
+    }
+}
+@media screen and (max-width:768px){
+    header .wrapper{
+        width: 80%;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        flex-direction: column;
+        top: 44px;
+        text-align: center;
+        left: -100%;
+        transition: 0.3s;
+        background-color: white;
+        margin: 0;
+    }
+    nav ul.active{
+        left: 0%;
+        margin-top: 4px;
+    }
+    nav ul li{
+        margin: 17px 0;
+    }
+    nav ul li a{
+        padding: 17px 40px;
+    }
+    .burger{
+        display: block;
+    }
+} 
+@media screen and (max-width:568px) {
+    header .wrapper{
+        width: 90%;
+    }
+}
